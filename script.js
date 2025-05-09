@@ -5,8 +5,8 @@ function mincost(arr)
 // return the min cost
 	arr.sort(function (a,b){return a-b})
 	let sum =0;
-	let ans = arr.forEach((element,i)=>{sum+=element});
-  return ans;
+	 arr.forEach((element,i)=>{sum+=element});
+  return sum;
 }
 
 module.exports=mincost;
