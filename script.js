@@ -3,10 +3,16 @@ function mincost(arr)
 //write your code here
 	
 // return the min cost
-	arr.sort(function (a,b){return a-b})
-	let sum =0;
-	 arr.forEach((element,i)=>{sum=sum + (arr.length-i)*element});
-  return sum;
+	let cost =0;
+while(arr.length>1){
+	arr.sort();
+	let a = arr.pop();
+	let b = arr.pop();
+	cost += a+b;
+	arr.push(a+b);
+	
+}
+	return cost;
 }
 
 module.exports=mincost;
