@@ -6,6 +6,7 @@ function mincost(arr)
 	let cost =0;
 while(arr.length>1){
 	arr.sort();
+	arr.reverse();
 	let a = arr.pop();
 	let b = arr.pop();
 	cost += a+b;
